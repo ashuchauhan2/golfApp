@@ -1,17 +1,41 @@
 <mainScreen@GridLayout>:
-    rows: 2
     Label:
         font_size: "75dp"
         font_name: "fonts/main.ttf"
         text: "Driving Range Practise"
         color: 12/255, 180/255, 76/255, 1
 
+    BoxLayout:
+        cols: 2
+        RoundedButton:
+            font_size: "35dp"
+            font_name: "fonts/main.ttf"
+            text: "Start"
+            size_hint: 1, .3
+            on_press: root.manager.current = 'start'
+
+        RoundedButton:
+            font_size: "35dp"
+            font_name: "fonts/main.ttf"
+            text: "Instructions"
+            size_hint: 1, .3
+            on_press: root.manager.current = 'instructions'
+
+<instructionsScreen>:
+    BoxLayout:
+        TextInput:
+            font_size: "25dp"
+            color: 12/255, 180/255, 76/255, 1
+            text: "Determine the golf shot and a yardage you deem fit for the picture displayed. Picture said golf shot on your driving range then execute the shot and make notes on what worked and what didn't. Lastly, practice your weaknesses, and play to your strengths on the course."
+            readonly: True
+
     RoundedButton:
         font_size: "35dp"
         font_name: "fonts/main.ttf"
-        text: "Start"
+        text: "Main Menu"
         size_hint: 1, .3
-        on_press: root.manager.current = 'start'
+        on_press: root.manager.current = 'main'
+
 
 <startScreen>:
     GridLayout:
@@ -23,9 +47,261 @@
         RoundedButton:
             text: "Next"
             size_hint: .4, .3
-            on_press: root.manager.current = 'augusta2'
+            on_press: root.manager.current = 'course'
 
-<augusta2@GridLayout>
+<courseScreen>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/augusta2.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course1'
+
+
+
+<courseScreen1>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/logo.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course2'
+
+<courseScreen2>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic4.png"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course3'
+
+<courseScreen3>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic5.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course4'
+
+<courseScreen4>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic6.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course5'
+
+<courseScreen5>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic7.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course6'
+
+<courseScreen6>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic8.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course7'
+
+<courseScreen7>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic9.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course8'
+
+<courseScreen8>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic10.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course9'
+
+<courseScreen9>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic11.png"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course10'
+
+<courseScreen10>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic12.png"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course11'
+
+<courseScreen11>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic13.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course12'
+
+<courseScreen12>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic14.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course13'
+
+<courseScreen13>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic15.png"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course14'
+
+<courseScreen14>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic16.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course15'
+
+<courseScreen15>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic17.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course16'
+
+<courseScreen16>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic18.png"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course17'
+
+<courseScreen17>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic19.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course18'
+
+<courseScreen18>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic20.jpg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course19'
+
+<courseScreen19>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic21.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Next"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'course20'
+
+<courseScreen20>:
+    GridLayout:
+        rows: 2
+        Image:
+            source: "images/pic22.jpeg"
+            pos_hint: {"center_x": .5, "center_y": .8}
+            allow_stretch: True
+        RoundedButton:
+            text: "Main Menu"
+            size_hint: .4, .3
+            on_press: root.manager.current = 'main'
 
 
 <RoundedButton@Button>
